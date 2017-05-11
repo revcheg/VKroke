@@ -76,3 +76,9 @@ Route::get('/friends/accept/{username}', [
     'uses' => '\VKroke\Http\Controllers\FriendController@getAccept',
     'as' => 'friend.accept',
 ]);
+
+Route::post('/status', [
+    'uses' => '\VKroke\Http\Controllers\StatusController@postStatus',
+    'as' => 'status.post',
+]);
+

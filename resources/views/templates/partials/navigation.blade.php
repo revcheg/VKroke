@@ -6,7 +6,7 @@
         <div class="collapse navbar-collapse">
             @if (Auth::check()) 
             <ul class="nav navbar-nav">
-                <li><a href="{{ route('home') }}">Timeline</a></li>
+                <li><a href="{{ route('home') }}">Новости</a></li>
                 <li><a href="{{ route('friend.index') }}">Друзья</a></li>
             </ul>
             <form class="navbar-form navbar-left" role="search" action="{{ route('search.results') }}">
