@@ -82,3 +82,7 @@ Route::post('/status', [
     'as' => 'status.post',
 ]);
 
+Route::post('/status/{statusId}/reply', [
+    'uses' => '\VKroke\Http\Controllers\StatusController@postReply',
+    'as' => 'status.reply',
+]);
