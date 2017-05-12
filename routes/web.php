@@ -77,6 +77,11 @@ Route::get('/friends/accept/{username}', [
     'as' => 'friend.accept',
 ]);
 
+Route::post('/friends/delete/{username}', [
+    'uses' => '\VKroke\Http\Controllers\FriendController@postDelete',
+    'as' => 'friend.delete',
+]);
+
 Route::post('/status', [
     'uses' => '\VKroke\Http\Controllers\StatusController@postStatus',
     'as' => 'status.post',
@@ -85,4 +90,9 @@ Route::post('/status', [
 Route::post('/status/{statusId}/reply', [
     'uses' => '\VKroke\Http\Controllers\StatusController@postReply',
     'as' => 'status.reply',
+]);
+
+Route::get('/status/{statusId}/like', [
+    'uses' => '\VKroke\Http\Controllers\StatusController@getLike',
+    'as' => 'status.like',
 ]);

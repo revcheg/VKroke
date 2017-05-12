@@ -21,4 +21,8 @@ class Status extends Model {
     public function replies() {
         return $this->hasMany('VKroke\Models\Status', 'parent_id');
     }
+    
+    public function likes() {
+        return $this->morphMany('VKroke\Models\Like', 'likeable');
+    }
 }
